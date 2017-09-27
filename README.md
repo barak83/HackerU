@@ -1,2 +1,0 @@
-# HackerU
-HomeWorkLesson15Fraction
