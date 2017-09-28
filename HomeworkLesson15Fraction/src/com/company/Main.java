@@ -3,37 +3,15 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+        Fraction fraction1 = new Fraction(4,9);
 
-        System.out.println(reduceFraction(3, 6));
+        Fraction fraction2 = new Fraction(fraction1);
+
+        Fraction fraction3 = new Fraction(6, 9);
+
+        System.out.println(fraction1.compareFractions(fraction3));
 
     }
-
-
-    public static int reduceFraction(int nominator, int denominator){
-        if (denominator <= 0){
-            return -1;
-        }
-        if (denominator == 1){
-            return nominator;
-        }
-        if (nominator <= 0){
-            return 0;
-        }
-        if (nominator == 1){
-            return nominator;
-        }
-        for (int i = 2; i < nominator; i++) {
-            if(nominator % i == 0){
-                return nominator;
-            }
-        }
-        for (int i = 2; i < denominator; i++) {
-            if (denominator % i == 0){
-                return denominator;
-            }
-        }
-        return reduceFraction(nominator, denominator);
-    }
-
 
 }
+
